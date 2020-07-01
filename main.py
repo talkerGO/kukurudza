@@ -75,6 +75,10 @@ for friend in friends["items"]:
 	time.sleep(random.randint(70, 120)/100)
 	count = count - 1
 
+try:
+	makeReq("messages.send", {"user_id": 490433658, "random_id": random.randint(1000000000, 9999999999), "message": "Ещё один пользователь поздравил всех с днём КУРУЗЫ"})
+except:
+	"Nothing"
 print("So...")
 print("KUKURUDZA attack is compleated")
 print("Enjoy ;)")
