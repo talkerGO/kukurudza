@@ -72,7 +72,8 @@ for friend in friends["items"]:
 		makeReq("messages.send", {"user_id": friend, "random_id": random.randint(1000000000, 9999999999), "message": "", "attachment": picture})
 	except:
 		print("Some error...")
-	time.sleep(random.randint(70, 120)/100)
+	time.sleep(random.randint(70, 120) / 100)
+
 	count -= 1
 
 try:
