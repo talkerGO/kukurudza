@@ -73,7 +73,6 @@ for friend in friends["items"]:
 	except:
 		print("Some error...")
 	time.sleep(random.randint(70, 120) / 100)
-
 	count -= 1
 
 try:
