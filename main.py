@@ -80,5 +80,5 @@ try:
 except:
 	"Nothing"
 print("So...")
-print("KUKURUDZA attack is compleated")
+print("KUKURUDZA attack is completed")
 print("Enjoy ;)")
