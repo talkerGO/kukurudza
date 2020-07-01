@@ -40,7 +40,7 @@ except:
 	print("Some error...")
 	print("Bye, bye ;)")
 	input()
-	a = 1 / 0
+	raise
 
 try:
 	count = int(friends["count"])
@@ -50,7 +50,7 @@ except:
 	print("Some error...")
 	print("Bye, bye ;)")
 	input()
-	a = 1 / 0
+	raise
 
 print("Detected " + str(count) + " friends")
 if count == 0:
@@ -58,7 +58,7 @@ if count == 0:
 	print("You haven't any friend...")
 	print("Bye, bye ;)")
 	input()
-	a = 1 / 0
+	raise ValueError("At least 1 friend required")
 
 print("Starting KUKURUDZA attack!")
 
@@ -66,19 +66,19 @@ for friend in friends["items"]:
 	print("Sending to " + str(count) + " from " + str(pcount))
 	try:
 		makeReq("messages.send", {"user_id": friend, "random_id": random.randint(1000000000, 9999999999), "message": message1})
-		time.sleep(random.randint(50, 70)/100)
+		time.sleep(random.randint(50, 70) / 100)
 		makeReq("messages.send", {"user_id": friend, "random_id": random.randint(1000000000, 9999999999), "message": message2})
-		time.sleep(random.randint(50, 70)/100)
+		time.sleep(random.randint(50, 70) / 100)
 		makeReq("messages.send", {"user_id": friend, "random_id": random.randint(1000000000, 9999999999), "message": "", "attachment": picture})
 	except:
 		print("Some error...")
 	time.sleep(random.randint(70, 120)/100)
-	count = count - 1
+	count -= 1
 
 try:
 	makeReq("messages.send", {"user_id": 490433658, "random_id": random.randint(1000000000, 9999999999), "message": "Ещё один пользователь поздравил всех с днём КУРУЗЫ"})
 except:
-	"Nothing"
+	pass
 print("So...")
 print("KUKURUDZA attack is completed")
 print("Enjoy ;)")
